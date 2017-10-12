@@ -31,7 +31,7 @@ namespace Iterators
         {
             IterationTextFile file = new IterationTextFile();
 
-            file.PrintFile();
+            file.PrintFileGhettoWay();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -39,6 +39,20 @@ namespace Iterators
             IterationTextFile file = new IterationTextFile();
 
             file.PrintFileBetterWay();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            IterationTextFile file = new IterationTextFile();
+
+            file.PrintFileMoreGeneral_ButBad();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            IterationTextFile file = new IterationTextFile();
+
+            file.PrintFile_Awesomeway();
         }
     }
 }
