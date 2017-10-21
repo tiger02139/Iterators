@@ -73,37 +73,59 @@ namespace Iterators
         public void PrintFileMoreGeneral_ButBad()
         {
             using (StreamReader reader = new StreamReader(@"..\..\SampleTextFile.txt"))
+            //using (StreamReader reader = new StreamReader(@""))
             {
                 foreach (string line in ReadStream(reader))
                 {
                     Console.WriteLine(line);
                 }
             }
+            //StreamReader reader = new StreamReader(@"..\..\SampleTextFile.txt");
+            //try
+            //{
+            //    foreach (string line in ReadStream(reader))
+            //    {
+            //        Console.WriteLine(line);
+            //    }
+            //}
+            //catch (Exception e) 
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
+            //finally
+            //{
+            //    reader.Close();
+            //    reader.Dispose();
+            //}
         }
 
         public IEnumerable<string> ReadStream(TextReader reader)
         {
             string line;
 
+
             while ((line = reader.ReadLine()) != null)
             {
+                throw new Exception();
                 yield return line;
             }
         }
 
 
-        public delegate TextReader Func<TextReader>();
-
-        public TextReader ProvideReader()
-        {
-            return new StreamReader(@"..\..\SampleTextFile.txt");
-        }
         /// <summary>
         /// FINALLY, a better way to generalize this AND take care of disposal problem.
         /// 1. The resource is acquired just before you need it.  You're in the context of IDisposable, so you can release the resource at the appropriate time.
         /// 2. If GetEnumerator is called multiple times, each call will result in an independent TextReader being created.
         /// </summary>
-        public void PrintFile_Awesomeway()
+        public delegate TextReader Func<TextReader>();
+
+        public TextReader ProvideReader()
+        {
+            return new StreamReader(@"..\..\SampleTextFile.txt");
+            //return new StreamReader("");
+        }
+
+        public void PrintFile_AwesomeWay()
         {
             Func<TextReader> provider = ProvideReader;
 
@@ -123,6 +145,51 @@ namespace Iterators
                 {
                     yield return line;
                 }
+            }
+        }
+
+        /// <summary>
+        /// p. 176 Print File lazily using iterator block and predicate
+        /// </summary>
+        public static IEnumerable<T> Where<T>(IEnumerable<T> source,
+                                                Predicate<T> predicate)
+        {
+            if (source == null || predicate == null)
+            {
+                throw new ArgumentNullException();
+            }
+            return WhereImpl(source, predicate);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="predicate"></param>
+        /// <returns></returns>
+        private static IEnumerable<T> WhereImpl<T>(IEnumerable<T> source,
+                                                Predicate<T> predicate)
+        {
+            foreach (T item in source)
+            {
+                if (predicate(item))
+                {
+                    yield return item;
+                }
+            }
+        }
+
+        public void PrintFileUsingLazyIteratorBlockAndPredicate()
+        {
+            IEnumerable<string> lines = ReadFile(@"..\..\SampleTextFile.txt");
+            Predicate<string> predicate = delegate (string line)
+                                            {
+                                                return line.StartsWith("      And");
+                                            };
+            foreach (string line in Where(lines, predicate))
+            {
+                Console.WriteLine(line);
             }
         }
     }

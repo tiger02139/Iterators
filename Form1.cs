@@ -52,7 +52,14 @@ namespace Iterators
         {
             IterationTextFile file = new IterationTextFile();
 
-            file.PrintFile_Awesomeway();
+            file.PrintFile_AwesomeWay();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            IterationTextFile file = new IterationTextFile();
+
+            file.PrintFileUsingLazyIteratorBlockAndPredicate();
         }
     }
 }
