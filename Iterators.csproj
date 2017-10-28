@@ -53,6 +53,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IterationTextFile_Part4.cs" />
+    <Compile Include="IterationTextFile_Part5.cs" />
     <Compile Include="OldSchoolNewSchool.cs" />
     <Compile Include="IterationTextFile_Part1.cs" />
     <Compile Include="IterationTextFile_Part3.cs" />

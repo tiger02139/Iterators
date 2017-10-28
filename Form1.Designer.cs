@@ -32,8 +32,8 @@
             this.iterateGhettoWay = new System.Windows.Forms.Button();
             this.iterateFileSlightlyBetter = new System.Windows.Forms.Button();
             this.iterateStream = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.awesomeFileIterator = new System.Windows.Forms.Button();
+            this.iteratorForeshadowLINQWhere = new System.Windows.Forms.Button();
             this.iterate_SomethingWrongHappens = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -78,25 +78,25 @@
             this.iterateStream.UseVisualStyleBackColor = true;
             this.iterateStream.Click += new System.EventHandler(this.iterateStream_Click);
             // 
-            // button5
+            // awesomeFileIterator
             // 
-            this.button5.Location = new System.Drawing.Point(539, 47);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 58);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Print file Awesome way";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.awesomeFileIterator.Location = new System.Drawing.Point(539, 47);
+            this.awesomeFileIterator.Name = "awesomeFileIterator";
+            this.awesomeFileIterator.Size = new System.Drawing.Size(125, 58);
+            this.awesomeFileIterator.TabIndex = 4;
+            this.awesomeFileIterator.Text = "Print file Awesome way";
+            this.awesomeFileIterator.UseVisualStyleBackColor = true;
+            this.awesomeFileIterator.Click += new System.EventHandler(this.awesomeFileIterator_Click);
             // 
-            // button6
+            // iteratorForeshadowLINQWhere
             // 
-            this.button6.Location = new System.Drawing.Point(539, 140);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(112, 64);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Print file with Lazy Iterator and Predicate";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.iteratorForeshadowLINQWhere.Location = new System.Drawing.Point(539, 140);
+            this.iteratorForeshadowLINQWhere.Name = "iteratorForeshadowLINQWhere";
+            this.iteratorForeshadowLINQWhere.Size = new System.Drawing.Size(112, 64);
+            this.iteratorForeshadowLINQWhere.TabIndex = 5;
+            this.iteratorForeshadowLINQWhere.Text = "Print file with Lazy Iterator and Predicate";
+            this.iteratorForeshadowLINQWhere.UseVisualStyleBackColor = true;
+            this.iteratorForeshadowLINQWhere.Click += new System.EventHandler(this.iteratorForeshadowLINQWhere_Click);
             // 
             // iterate_SomethingWrongHappens
             // 
@@ -112,9 +112,9 @@
             // 
             this.button1.Location = new System.Drawing.Point(277, 250);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(162, 64);
             this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
+            this.button1.Text = "Trying to see what goes wrong";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -125,8 +125,8 @@
             this.ClientSize = new System.Drawing.Size(756, 600);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.iterate_SomethingWrongHappens);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.iteratorForeshadowLINQWhere);
+            this.Controls.Add(this.awesomeFileIterator);
             this.Controls.Add(this.iterateStream);
             this.Controls.Add(this.iterateFileSlightlyBetter);
             this.Controls.Add(this.iterateGhettoWay);
@@ -143,8 +143,8 @@
         private System.Windows.Forms.Button iterateGhettoWay;
         private System.Windows.Forms.Button iterateFileSlightlyBetter;
         private System.Windows.Forms.Button iterateStream;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button awesomeFileIterator;
+        private System.Windows.Forms.Button iteratorForeshadowLINQWhere;
         private System.Windows.Forms.Button iterate_SomethingWrongHappens;
         private System.Windows.Forms.Button button1;
     }

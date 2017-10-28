@@ -60,16 +60,15 @@ namespace Iterators
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+
+        private void awesomeFileIterator_Click(object sender, EventArgs e)
         {
-            //IterationTextFile.PrintFile_AwesomeWay();
+            IterationTextFile_Part4.PrintFile_AwesomeWay();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void iteratorForeshadowLINQWhere_Click(object sender, EventArgs e)
         {
-            //IterationTextFile.PrintFileUsingLazyIteratorBlockAndPredicate();
+            IterationTextFile_Part5.PrintFileUsingLazyIteratorBlockAndPredicate();
         }
-
-
     }
 }
