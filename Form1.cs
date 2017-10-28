@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Iterators
@@ -17,49 +10,66 @@ namespace Iterators
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void oldSchool_Click(object sender, EventArgs e)
         {
-            IterationSample collection = new IterationSample();
-
+            Console.WriteLine("Iteration using old school implementation:");
+            SampleCollection_OldSchool collection = new SampleCollection_OldSchool();
             foreach (string element in collection)
+            {
+                Console.WriteLine(element);
+            }
+
+            Console.WriteLine("Iteration using yield return implementation of state machine:");
+            SampleCollection_UsingYield newCollection = new SampleCollection_UsingYield();
+            foreach (string element in newCollection)
             {
                 Console.WriteLine(element);
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void iterateGhettoWay_Click(object sender, EventArgs e)
         {
-            IterationTextFile file = new IterationTextFile();
-
-            file.PrintFileGhettoWay();
+            Console.WriteLine("Iteration through file, *without* using IEnumerable interface");
+            IterationTextFile_Part1.PrintFileGhettoWay();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void iterateFileSlightlyBetter_Click(object sender, EventArgs e)
         {
-            IterationTextFile file = new IterationTextFile();
-
-            file.PrintFileBetterWay();
+            Console.WriteLine("Iteration through file, using IEnumerable collection that you can iterate over.");
+            Console.WriteLine("The collection function takes in text file.");
+            IterationTextFile_Part2.PrintFileBetterWay();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void iterateStream_Click(object sender, EventArgs e)
         {
-            IterationTextFile file = new IterationTextFile();
+            Console.WriteLine("Iteration through file, using IEnumerable collection that you can iterate over.");
+            Console.WriteLine("The collection function takes in a stream and is more general.");
+            Console.WriteLine("However, it has disposable difficulties.");
+            IterationTextFile_Part3.PrintFileMoreGeneral_ButBad();
+        }
 
-            file.PrintFileMoreGeneral_ButBad();
+        private void iterate_SomethingWrongHappens_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Disposable difficulties.");
+            IterationTextFile_Part3.PrintFile_SomethingWrongHappens();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IterationTextFile_Part3.PrintFile_SeeHowSomethingWrongHappens();
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            IterationTextFile file = new IterationTextFile();
-
-            file.PrintFile_AwesomeWay();
+            //IterationTextFile.PrintFile_AwesomeWay();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            IterationTextFile file = new IterationTextFile();
-
-            file.PrintFileUsingLazyIteratorBlockAndPredicate();
+            //IterationTextFile.PrintFileUsingLazyIteratorBlockAndPredicate();
         }
+
+
     }
 }

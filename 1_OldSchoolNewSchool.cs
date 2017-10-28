@@ -3,16 +3,16 @@ using System.Collections;
 
 namespace Iterators
 {
-    public class IterationSample : IEnumerable
+    /// <summary>
+    /// Using short form of IEnumerator (yield return)
+    /// </summary>
+    public sealed class SampleCollection_UsingYield : IEnumerable
     {
-        string[] sequence = {"a","b","c","d","e"};
+        string[] sequence = { "u", "v", "w", "x", "y", "z" };
 
         public IEnumerator GetEnumerator()
         {
-            //using long form of IEnumerator
-            //return new Iterator(sequence);
-
-            //using short form of IEnumerator
+            
             for (int index = 0; index < sequence.Length; index++)
             {
                 yield return sequence[index];
@@ -20,6 +20,22 @@ namespace Iterators
         }
     }
 
+    /// <summary>
+    /// Using long form of IEnumerator
+    /// </summary>
+    public sealed class SampleCollection_OldSchool : IEnumerable
+    {
+        string[] sequence = {"a","b","c","d","e"};
+
+        public IEnumerator GetEnumerator()
+        {
+            return new Iterator(sequence);
+        }
+    }
+
+    /// <summary>
+    /// Implementation of IEnumerator interface for use by SampleCollection_OldSchool's GetEnumerator
+    /// </summary>
     public class Iterator : IEnumerator
     {
         private string[] _sequence;

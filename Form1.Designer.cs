@@ -28,57 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.oldSchool = new System.Windows.Forms.Button();
+            this.iterateGhettoWay = new System.Windows.Forms.Button();
+            this.iterateFileSlightlyBetter = new System.Windows.Forms.Button();
+            this.iterateStream = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.iterate_SomethingWrongHappens = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // oldSchool
             // 
-            this.button1.Location = new System.Drawing.Point(66, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 80);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Explicit Iterator Implementation";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.oldSchool.Location = new System.Drawing.Point(52, 60);
+            this.oldSchool.Name = "oldSchool";
+            this.oldSchool.Size = new System.Drawing.Size(155, 80);
+            this.oldSchool.TabIndex = 0;
+            this.oldSchool.Text = "Explicit Iterator Implementation";
+            this.oldSchool.UseVisualStyleBackColor = true;
+            this.oldSchool.Click += new System.EventHandler(this.oldSchool_Click);
             // 
-            // button2
+            // iterateGhettoWay
             // 
-            this.button2.Location = new System.Drawing.Point(66, 208);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 51);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Ghetto way of iterating through file";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.iterateGhettoWay.Location = new System.Drawing.Point(52, 172);
+            this.iterateGhettoWay.Name = "iterateGhettoWay";
+            this.iterateGhettoWay.Size = new System.Drawing.Size(162, 51);
+            this.iterateGhettoWay.TabIndex = 1;
+            this.iterateGhettoWay.Text = "Ghetto way of iterating through file";
+            this.iterateGhettoWay.UseVisualStyleBackColor = true;
+            this.iterateGhettoWay.Click += new System.EventHandler(this.iterateGhettoWay_Click);
             // 
-            // button3
+            // iterateFileSlightlyBetter
             // 
-            this.button3.Location = new System.Drawing.Point(66, 306);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 88);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Professional way of iterating through text file (but specific to text files)";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.iterateFileSlightlyBetter.Location = new System.Drawing.Point(52, 250);
+            this.iterateFileSlightlyBetter.Name = "iterateFileSlightlyBetter";
+            this.iterateFileSlightlyBetter.Size = new System.Drawing.Size(162, 88);
+            this.iterateFileSlightlyBetter.TabIndex = 2;
+            this.iterateFileSlightlyBetter.Text = "Professional way of iterating through text file (but specific to text files)";
+            this.iterateFileSlightlyBetter.UseVisualStyleBackColor = true;
+            this.iterateFileSlightlyBetter.Click += new System.EventHandler(this.iterateFileSlightlyBetter_Click);
             // 
-            // button4
+            // iterateStream
             // 
-            this.button4.Location = new System.Drawing.Point(66, 430);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(162, 77);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Print Stream, but this has disposal problem";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.iterateStream.Location = new System.Drawing.Point(277, 38);
+            this.iterateStream.Name = "iterateStream";
+            this.iterateStream.Size = new System.Drawing.Size(162, 77);
+            this.iterateStream.TabIndex = 3;
+            this.iterateStream.Text = "Print Stream, but this has disposal problem";
+            this.iterateStream.UseVisualStyleBackColor = true;
+            this.iterateStream.Click += new System.EventHandler(this.iterateStream_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(386, 289);
+            this.button5.Location = new System.Drawing.Point(539, 47);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(125, 58);
             this.button5.TabIndex = 4;
@@ -88,7 +90,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(386, 386);
+            this.button6.Location = new System.Drawing.Point(539, 140);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(112, 64);
             this.button6.TabIndex = 5;
@@ -96,17 +98,39 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // iterate_SomethingWrongHappens
+            // 
+            this.iterate_SomethingWrongHappens.Location = new System.Drawing.Point(277, 146);
+            this.iterate_SomethingWrongHappens.Name = "iterate_SomethingWrongHappens";
+            this.iterate_SomethingWrongHappens.Size = new System.Drawing.Size(162, 58);
+            this.iterate_SomethingWrongHappens.TabIndex = 6;
+            this.iterate_SomethingWrongHappens.Text = "Iterate, then something wrong happens";
+            this.iterate_SomethingWrongHappens.UseVisualStyleBackColor = true;
+            this.iterate_SomethingWrongHappens.Click += new System.EventHandler(this.iterate_SomethingWrongHappens_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(277, 250);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 600);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.iterate_SomethingWrongHappens);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.iterateStream);
+            this.Controls.Add(this.iterateFileSlightlyBetter);
+            this.Controls.Add(this.iterateGhettoWay);
+            this.Controls.Add(this.oldSchool);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -115,12 +139,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button oldSchool;
+        private System.Windows.Forms.Button iterateGhettoWay;
+        private System.Windows.Forms.Button iterateFileSlightlyBetter;
+        private System.Windows.Forms.Button iterateStream;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button iterate_SomethingWrongHappens;
+        private System.Windows.Forms.Button button1;
     }
 }
 
